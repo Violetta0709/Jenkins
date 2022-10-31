@@ -25,6 +25,7 @@ public class RegistrationFormPage {
     public RegistrationFormPage openPage() {
         open("/automation-practice-form");
         zoom(0.7);
+        executeJavaScript("$('footer').remove()");
         $(".practice-form-wrapper").shouldHave(text(TITLE_TEXT));
         return this;
     }
